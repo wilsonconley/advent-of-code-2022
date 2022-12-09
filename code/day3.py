@@ -13,7 +13,7 @@ def part_one() -> None:
 def calc_score(common: list[str]) -> int:
     score = 0
     for c in common:
-        if c >= "a" and c <= "z":
+        if "a" <= c <= "z":
             score += ord(c) - ord("a") + 1
         else:
             score += ord(c) - ord("A") + 27

@@ -11,12 +11,8 @@ def main() -> None:
                 two_min >= one_min and two_max <= one_max
             ):
                 full_overlap += 1
-            if (
-                (one_min >= two_min and one_min <= two_max)
-                or (one_max >= two_min and one_max <= two_max)
-            ) or (
-                (two_min >= one_min and two_min <= one_max)
-                or (two_max >= one_min and two_max <= one_max)
+            if ((two_min <= one_min <= two_max) or (two_min <= one_max <= two_max)) or (
+                (one_min <= two_min <= one_max) or (one_min <= two_max <= one_max)
             ):
                 any_overlap += 1
     print(f"Num full_overlap pairs = {full_overlap}")

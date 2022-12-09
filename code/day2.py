@@ -43,8 +43,8 @@ def part_one() -> None:
 
 def calculate_score(guide: list[tuple[str, str]]) -> int:
     score = 0
-    for round in guide:
-        score += Score[outcomes[round]].value + Score[round[1]].value
+    for event in guide:
+        score += Score[outcomes[event]].value + Score[event[1]].value
     return score
 
 
@@ -63,9 +63,9 @@ def part_two() -> None:
             opp_shape = shapes[opp]
             desired_outcome = end_goal[desired]
             my_shape = "ERROR"
-            for x in outcomes:
-                if outcomes[x] == desired_outcome and x[0] == opp_shape:
-                    my_shape = x[1]
+            for k, v in outcomes.items():
+                if v == desired_outcome and k[0] == opp_shape:
+                    my_shape = k[1]
             guide.append((opp_shape, my_shape))
     score = calculate_score(guide)
     print(f"Part 2: final score = {score}")

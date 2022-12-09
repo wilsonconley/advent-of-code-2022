@@ -18,7 +18,7 @@ def main() -> None:
             else:
                 elves.append(Elf(items))
                 items = []
-    print("max is: " + str(max([elf.total for elf in elves])))
+    print("max is: " + str(max(elf.total for elf in elves)))
     print("top 3: " + str(sum(sorted([elf.total for elf in elves], reverse=True)[:3])))
 
 
