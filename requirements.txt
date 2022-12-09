@@ -1,2 +1,4 @@
 black ~= 22.6
 pandas ~= 1.4
+mypy ~= 0.99
+pylint ~= 2.15

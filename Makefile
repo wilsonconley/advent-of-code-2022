@@ -6,3 +6,9 @@ ENV := $(shell basename $(FULL_PATH))
 init-env:
 	conda create --yes -n $(ENV) python=3.10
 	. ~/.bash_profile && conda activate $(ENV) && pip install -r requirements.txt
+
+.PHONY: check
+check:
+	mypy --strict --pretty --show-error-codes .
+	black --diff --check .
+	pylint code
