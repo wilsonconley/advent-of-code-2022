@@ -10,13 +10,14 @@ class Elf:
 def main() -> None:
     elves: list[Elf] = []
     items: list[int] = []
-    for line in open("inputs/day1"):
-        line_ = line.strip()
-        if line_:
-            items.append(int(line_))
-        else:
-            elves.append(Elf(items))
-            items = []
+    with open("inputs/day1") as file:
+        for line in file:
+            line_ = line.strip()
+            if line_:
+                items.append(int(line_))
+            else:
+                elves.append(Elf(items))
+                items = []
     print("max is: " + str(max([elf.total for elf in elves])))
     print("top 3: " + str(sum(sorted([elf.total for elf in elves], reverse=True)[:3])))
 
