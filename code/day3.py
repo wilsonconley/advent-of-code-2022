@@ -1,6 +1,6 @@
 def part_one() -> None:
     sacks: list[tuple[str, str]] = []
-    with open("inputs/day3") as file:
+    with open("inputs/day3", "r", encoding="utf-8") as file:
         for line in file:
             contents = line.strip()
             half = int(len(contents) / 2)
@@ -22,12 +22,12 @@ def calc_score(common: list[str]) -> int:
 
 def part_two() -> None:
     groups: list[tuple[str, str, str]] = []
-    with open("inputs/day3") as file:
+    with open("inputs/day3", "r", encoding="utf-8") as file:
         tmp: list[str] = []
         for line in file:
             tmp.append(line.strip())
             if len(tmp) == 3:
-                groups.append(tuple(tmp))
+                groups.append(tuple(tmp))  # type: ignore[arg-type]
                 tmp = []
     common = [
         [x for x in group[0] if x in group[1] and x in group[2]][0] for group in groups

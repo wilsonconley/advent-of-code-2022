@@ -33,9 +33,10 @@ class Score(Enum):
 
 def part_one() -> None:
     guide: list[tuple[str, str]] = []
-    with open("inputs/day2") as file:
+    with open("inputs/day2", "r", encoding="utf-8") as file:
         for line in file:
-            guide.append(tuple([shapes[x] for x in line.strip().split()]))
+            x, y = line.strip().split()
+            guide.append((shapes[x], shapes[y]))
     score = calculate_score(guide)
     print(f"Part 1: final score = {score}")
 
@@ -56,7 +57,7 @@ end_goal: dict[str, str] = {
 
 def part_two() -> None:
     guide: list[tuple[str, str]] = []
-    with open("inputs/day2") as file:
+    with open("inputs/day2", "r", encoding="utf-8") as file:
         for line in file:
             opp, desired = tuple(line.strip().split())
             opp_shape = shapes[opp]

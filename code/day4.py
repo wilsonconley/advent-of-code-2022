@@ -1,7 +1,7 @@
 def main() -> None:
     full_overlap = 0
     any_overlap = 0
-    with open("inputs/day4") as file:
+    with open("inputs/day4", "r", encoding="utf-8") as file:
         for line in file:
             contents = line.strip()
             elf_one, elf_two = contents.split(",")

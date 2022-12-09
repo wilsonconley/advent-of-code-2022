@@ -10,7 +10,7 @@ class Elf:
 def main() -> None:
     elves: list[Elf] = []
     items: list[int] = []
-    with open("inputs/day1") as file:
+    with open("inputs/day1", "r", encoding="utf-8") as file:
         for line in file:
             line_ = line.strip()
             if line_:
