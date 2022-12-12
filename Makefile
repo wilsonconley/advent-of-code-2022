@@ -12,3 +12,7 @@ check:
 	mypy --strict --pretty --show-error-codes .
 	black --diff --check .
 	pylint code
+
+.PHONY: leaderboard
+leaderboard:
+	python code/leaderboard.py
