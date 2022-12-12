@@ -4,8 +4,7 @@ Join my private leaderboard!
 
 Code: 2794065-5884e73a
 
-```
-               1111111111222222
-      1234567890123456789012345
-1) 16 ********                  wilsonconley
+```leaderboard
+           name   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  stars
+1  wilsonconley  **  **  **  **  **  **  **  **                                                                         16
 ```
