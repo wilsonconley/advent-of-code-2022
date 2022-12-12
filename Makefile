@@ -16,3 +16,6 @@ check:
 .PHONY: leaderboard
 leaderboard:
 	python code/leaderboard.py
+	git add README.md
+	git commit -m "(auto) Update leaderboard"
+	git push
