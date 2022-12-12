@@ -14,7 +14,7 @@ def get_leaderboard() -> pd.DataFrame:
     )
     resp_json = resp.json()
 
-    columns = ["name"] + [str(x) for x in range(1, 26)] + ["stars"]
+    columns = ["name", "stars"] + [str(x) for x in range(1, 26)]
     table_dict: dict[str, list[str]] = {}
     for col in columns:
         table_dict[col] = []
