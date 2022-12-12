@@ -4,3 +4,4 @@ mypy ~= 0.99
 pylint ~= 2.15
 anytree ~= 2.8
 requests ~= 2.28
+types-requests ~= 2.28
